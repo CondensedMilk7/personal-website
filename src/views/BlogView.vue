@@ -1,5 +1,6 @@
 <template>
   <nav-bar :isHome="false" />
+  <back-to-top />
   <main>
     <article v-html="mdToHtml" v-highlight></article>
   </main>
@@ -7,13 +8,14 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import BackToTop from "@/components/BackToTop.vue";
 import { environment } from "@/environment/environment";
 import axios from "axios";
 import { marked } from "marked";
 
 export default {
   name: "BlogView",
-  components: { NavBar },
+  components: { NavBar, BackToTop },
   data() {
     return {
       blogMd: "",
