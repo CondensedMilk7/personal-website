@@ -16,5 +16,3 @@ export default {
   components: { HeroBlock, AboutInfo, NavBar },
 };
 </script>
-
-<style></style>

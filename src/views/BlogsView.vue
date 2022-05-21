@@ -1,6 +1,7 @@
 <template>
   <div>
     <nav-bar :isHome="false" />
+    <p class="error" v-show="errorMsg">An error has occurred: {{ errorMsg }}</p>
     <main class="cards">
       <blog-card
         v-for="card in cards"
@@ -30,14 +31,18 @@ export default {
   data() {
     return {
       cards: [],
+      errorMsg: "",
     };
   },
   mounted() {
-    axios.get(`${environment.url}/cards.json`).then((response) => {
-      this.cards = response.data;
-    });
+    axios
+      .get(`${environment.url}/cards.json`)
+      .then((response) => {
+        this.cards = response.data;
+      })
+      .catch((err) => {
+        this.errorMsg = err.message;
+      });
   },
 };
 </script>
-
-<style scoped></style>

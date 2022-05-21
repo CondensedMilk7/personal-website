@@ -1,6 +1,7 @@
 <template>
   <nav-bar :isHome="false" />
   <back-to-top />
+  <p class="error" v-show="errorMsg">An error has occurred: {{ errorMsg }}</p>
   <main>
     <article v-html="mdToHtml" v-highlight></article>
   </main>
@@ -19,6 +20,7 @@ export default {
   data() {
     return {
       blogMd: "",
+      errorMsg: "",
     };
   },
 
@@ -33,9 +35,10 @@ export default {
       .get(`${environment.url}/${this.$route.params.blog}/text.md`)
       .then((response) => {
         this.blogMd = response.data;
+      })
+      .catch((err) => {
+        this.errorMsg = err.message;
       });
   },
 };
 </script>
-
-<style scoped></style>

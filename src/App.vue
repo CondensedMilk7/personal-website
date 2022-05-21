@@ -3,6 +3,8 @@
 </template>
 
 <style>
+/* Global Styles */
+
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Sans+Georgian&family=Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&family=Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
@@ -129,6 +131,12 @@ pre {
   display: none;
 }
 
+.error {
+  background-color: var(--warn);
+  color: #1a1b26;
+  text-align: center;
+}
+
 /* 
 -------------------------------------------------------------------------------------------------
 Media queries
@@ -138,6 +146,9 @@ Media queries
 @media (max-width: 600px) {
   html {
     font-size: 15px;
+  }
+  p {
+    text-align: left;
   }
 }
 
