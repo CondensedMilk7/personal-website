@@ -1,6 +1,7 @@
 <template>
   <div>
     <nav-bar :isHome="false" />
+    <loading-spinner v-show="loading" />
     <p class="error" v-show="errorMsg">An error has occurred: {{ errorMsg }}</p>
     <main class="cards">
       <blog-card
@@ -19,6 +20,7 @@
 <script>
 import NavBar from "@/components/NavBar.vue";
 import BlogCard from "@/components/BlogCard.vue";
+import LoadingSpinner from "@/components/LoadingSpinner.vue";
 import { environment } from "@/environment/environment";
 import axios from "axios";
 
@@ -27,12 +29,22 @@ export default {
   components: {
     NavBar,
     BlogCard,
+    LoadingSpinner,
   },
   data() {
     return {
       cards: [],
       errorMsg: "",
     };
+  },
+  computed: {
+    loading() {
+      if (this.cards.length || this.errorMsg) {
+        return false;
+      } else {
+        return true;
+      }
+    },
   },
   mounted() {
     axios
