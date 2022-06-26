@@ -28,28 +28,21 @@
           </div>
         </div>
         <div class="project">
-          <h2>Corona Worldwide</h2>
+          <h2>Countryfetch</h2>
           <p>
-            A simple app showcasing statistics regarding the COVID-19 pandemic.
-            It can show both global and country-specific information as well as
-            statistics for a particular date.
+            A simple CLI tool for fetching information about countries, built
+            with TypeScript and Deno. It generates ASCII art from flag images to
+            be displayed on the terminal.
           </p>
           <div class="project-preview">
             <a
-              href="https://gallant-thompson-f6451b.netlify.app/"
-              target="_blank"
-            >
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>live
-              preview</a
-            >
-            <a
-              href="https://github.com/CondensedMilk7/corona-worldwide"
+              href="https://github.com/CondensedMilk7/countryfetch"
               target="_blank"
               ><i class="fa-solid fa-code"></i>source code</a
             >
             <img
-              src="https://user-images.githubusercontent.com/82287873/142766742-7b629605-ea7d-4f29-b994-2c4df4a222b6.png"
-              alt="Corona Worldwide project screenshot"
+              src="https://raw.githubusercontent.com/CondensedMilk7/countryfetch/master/images/countryfetch.png"
+              alt="Countryfetch preview"
             />
           </div>
         </div>
