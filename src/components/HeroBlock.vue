@@ -37,8 +37,8 @@
               </li>
             </ul>
           </div>
-          <a href="mailto: pridon@primordialsoup.info" class="contact__mail"
-            >pridon@primordialsoup.info
+          <a href="mailto: pridontetradze@gmail.com" class="contact__mail"
+            >pridontetradze@gmail.com
           </a>
         </div>
       </div>
